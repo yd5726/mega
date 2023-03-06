@@ -7,13 +7,14 @@
     /* background: rgba(0,0,0,0.1); */
     border-bottom: 1px solid #c6c6c6;
 }
+#banner { position: relative; } /* 기준점 */
 
 /* 가운데 영역 */
 .container {
     position: relative; 
     width: 1280px; 
     margin: 0 auto; 
-    /* background: rgba(0,0,0,0.1);  */
+    /* background: rgba(0,0,0,0.4); */
 }
 
 /* 로우 영역 */
@@ -23,7 +24,7 @@
 .header h1 { float: left; }
 .header h1 em {
     padding: 15px 8px 5px 0;
-    display: inline-block; /*inline-block : 가로 정렬 + 페딩 값 부여*/
+    display: inline-block; /* inline-block : 가로 정렬 + padding */
 }
 .header h1 em img { width: 155px; }
 .header h1 strong {
@@ -47,4 +48,77 @@
     font-size: 17px;
     font-weight: 700;
     color: #444;
+}
+
+/* 배너 영역 */
+.banner_menu {
+    position: absolute;
+    left: 0; top: 20px; 
+    width: 100%; height: 100px;
+    overflow: hidden; /* clearfix 대신 */
+}
+.banner_menu a {
+    color: #fff; 
+    font-size: 16px; 
+    transition: all 0.3s;
+}
+.banner_menu a:hover { color: #c1c1c1; }
+.banner_menu .bm_left { float: left; }
+.banner_menu .bm_left ul:first-child { padding-top: 7px; }
+.banner_menu .bm_left li { 
+    display: inline;
+    margin-right: 30px;
+    position: relative; /* 기준점 */
+}
+.banner_menu .bm_left li.total { margin-right: 20px; }
+.banner_menu .bm_left li.total a {
+    font-size: 14px; 
+    padding: 3px 10px; 
+    display: inline-block; 
+    border: 1px solid #fff; 
+    transition: all 0.3s;
+}
+.banner_menu .bm_left li.total a:hover {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+}
+.banner_menu .bm_right {
+    float: right; 
+    overflow: hidden; /* clearfix 대신 */
+}
+.banner_menu .bm_right ul { float: left; }
+.banner_menu .bm_right ul:first-child { padding-top: 7px; }
+.banner_menu .bm_right li {
+    display: inline;
+    text-align: center;
+    margin-right: 20px;
+    position: relative; /* 기준점 */
+}
+.banner_menu .bm_right li.line { margin-right: 30px; }
+.banner_menu li.line:after {
+    content: ''; 
+    width: 1px; 
+    height: 14px; 
+    background: #fff; 
+    position: absolute; 
+    right: -18px; top: 2px;
+}
+.banner_menu .bm_right li.white { margin-right: 10px; }
+.banner_menu .bm_right li.white a {
+    width: 80px; 
+    background-color: #fff; 
+    color: #3a0e6a; 
+    padding: 7px 30px 9px 30px; 
+    display: inline-block; /* inline-block : width + padding */
+    border: 1px solid #fff;
+}
+.banner_menu .bm_right li.purple { margin-right: 0; }
+.banner_menu .bm_right li.purple a {
+    width: 80px; 
+    background-color: #3a0e6a; 
+    color: #fff; 
+    padding: 7px 30px 9px 30px; 
+    display: inline-block; /* inline-block : width + padding */
+    border: 1px solid #6e40c4;
 }
