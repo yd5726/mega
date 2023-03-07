@@ -89,6 +89,7 @@
     left: 0; top: 20px; 
     width: 100%; height: 100px;
     overflow: hidden; /* clearfix 대신 */
+    z-index: 10; /* background로 이미지 넣은 것보다 위로 가도록 설정 */
 }
 .banner_menu a {
     color: #fff; 
@@ -155,6 +156,11 @@
     display: inline-block; /* inline-block : width + padding */
     border: 1px solid #6e40c4;
 }
+
+.slider { width: 100%; height: 600px; }
+.slider .ss1 { background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover; }
+.slider .ss2 { background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover; }
+.slider .ss3 { background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover; }
 
 /* 미디어쿼리 - 크기별로 반응형 설정 */
 @media (max-width: 1290px){
