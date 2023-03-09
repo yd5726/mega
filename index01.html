@@ -136,7 +136,7 @@
       <div class="container">
          <div class="row">
             <div class="movie">
-               <h2 class="ir_so">최신 영화 정보</h2>
+               <h2 class="ir_so">영화 예매</h2>
                <div class="movie_title">
                   <ul>
                      <li class="active"><a href="#">박스오피스</a></li>
@@ -683,6 +683,20 @@
          },
          autoplay: {
             delay: 5000
+         },
+         breakpoints: {
+            600: {
+               slidesPerView: 1.4,
+               spaceBetween: 24
+            },
+            768: {
+               slidesPerView: 2,
+               spaceBetween: 24
+            },
+            960: {
+               slidesPerView: 3,
+               spaceBetween: 24
+            }
          }
       });
 
