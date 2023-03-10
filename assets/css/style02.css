@@ -20,6 +20,7 @@
     display: block; /* fix */
 }
 #event {}
+#opening { background: url('../img/bg01.jpg') no-repeat center top; background-size: cover; margin: 17px 0; }
 
 /* 가운데 영역 */
 .container {
@@ -313,6 +314,52 @@
     width: 32%;
 }
 
+/* 오프닝 영역 */
+.opening { padding: 100px 0; text-align: center; color: #bb9b51; }
+.opening h2 { margin-bottom: 15px; }
+.opening h2 .grand {
+    background-position: 0 -175px; 
+    display: inline-block;
+    width: 330px; height: 50px;
+}
+.opening .date {
+    background-position: 0 -225px;
+    display: inline-block;
+    width: 260px; height: 45px;
+}
+.opening .desc {
+    font-size: 35px;
+    font-weight: 300;
+    padding-bottom: 20px;
+    background: url('../img/bar.png') no-repeat bottom center;
+    background-size: 100%;
+}
+.opening .open_box {
+    overflow: hidden; /* clearfix 대신 */
+    padding: 20px 3% 0 3%;
+}
+.opening .open_box > div {
+    float: left;
+    width: 27.333%;
+    margin: 4% 3% 3%;
+    border: 1px solid #3e4b44;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
+}
+.opening .open_box > div h3 { 
+    color: #fff;
+    border: 1px solid #6e3abb;
+    font-size: 19px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #551e9b;
+    margin-top: -24px; /* quiz */
+    font-weight: 300;
+}
+.opening .open_box > div p { font-size: 23px; color: #fff; font-weight: 700; padding: 6% 0 10% 0; }
+.opening .open_box > div em { display: block; font-weight: bold; }
+.opening .open_box > div strong { display: block; }
+
 /* 미디어쿼리 - 크기별로 반응형 설정 */
 @media (max-width: 1290px){
     .container { width: 100%; }
@@ -346,6 +393,10 @@
         width: 25%;
         box-sizing: border-box;
     }
+
+    .opening { padding: 50px 0; }
+    .opening .open_box { display: none; }
+    .opening .desc { font-size: 25px; background: none; }
 }
 
 @media (max-width: 768px){
@@ -409,6 +460,8 @@
     .event h2 { font-size: 24px; font-weight: 700; }
     .event .event_left { width: 100%; }
     .event .event_right { display: none; }
+
+    #opening { margin: 0; }
 }
 
 @media (max-width: 600px){
@@ -474,6 +527,17 @@
     #event .row { padding: 0 8px; }
     .event { padding: 16px; }
     .event h2 { font-size: 18px; margin-bottom: 10px; }
+
+    #opening { margin: 8px 0; }
+    .opening { padding: 20px 0; }
+    .opening h2 { margin-bottom: 10px; }
+    .opening h2 .grand { 
+        background-size: 300px;
+        background-position: 0 -105px;
+        width: 197px; height: 24px;
+    }
+    .opening .date { display: none; }
+    .opening .desc { font-size: 16px; font-weight: 400; padding-bottom: 0; }
 }
 
 @media (max-width: 480px){
